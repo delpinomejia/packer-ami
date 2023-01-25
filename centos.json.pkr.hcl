@@ -68,7 +68,7 @@ build {
   sources = ["source.amazon-ebs.centos"]
 
   provisioner "shell" {
-    inline = ["sleep 30", "sudo yum -y update", "sudo yum install -y postgresql unzip wget curl ca-certificates xfsprogs", "curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip", "unzip awscliv2.zip", "sudo ./aws/install", "dnf module list postgresql", "sudo dnf module reset postgresql -y", "sudo dnf module enable postgresql:${var.postgres_version} -y", "sudo dnf install postgresql-server"]
+    inline = ["sleep 30", "sudo yum -y update", "sudo yum install -y postgresql unzip wget curl ca-certificates xfsprogs", "curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip", "unzip awscliv2.zip", "sudo ./aws/install", "dnf module list postgresql", "sudo dnf module reset postgresql -y", "sudo dnf module enable postgresql:${var.postgres_version} -y", "sudo dnf install postgresql-server -y"]
   }
 
   provisioner "shell" {
