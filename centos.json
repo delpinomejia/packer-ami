@@ -15,7 +15,7 @@
       "name": "CentOS Stream 9 x86_64*",
       "root-device-type": "ebs"
       },
-      "owners": ["aws-marketplace"],
+      "owners": "125523088429",
       "most_recent": true
     },
     "instance_type": "t2.small",
